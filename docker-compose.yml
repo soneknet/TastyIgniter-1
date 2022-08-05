@@ -4,7 +4,7 @@ services:
     image: thisisqasim/tastyigniter:3.4.0
     hostname: tasty
     ports:
-      - 8001:80
+      - 8001:8001
     environment:
       - APP_URL=https://192.168.1.226:8001
       - DB_CONNECTION=mysql
