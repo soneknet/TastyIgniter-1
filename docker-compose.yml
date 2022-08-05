@@ -6,12 +6,12 @@ services:
     ports:
       - 8001:80
     environment:
-      - APP_URL=https://tasty.example.com
+      - APP_URL=https://192.168.1.226:8001
       - DB_CONNECTION=mysql
       - DB_HOST=db
       - DB_DATABASE=tastyigniter
       - DB_USERNAME=tastyigniter
-      - DB_PASSWORD=somepassword
+      - DB_PASSWORD=tastyigniter
       - CACHE_DRIVER=redis
       - REDIS_HOST=redis
     restart: always  
@@ -20,10 +20,10 @@ services:
     volumes:
       - ./db:/var/lib/mysql
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_RANDOM_ROOT_PASSWORD=
       - MYSQL_DATABASE=tastyigniter
       - MYSQL_USER=tastyigniter
-      - MYSQL_PASSWORD=somepassword
+      - MYSQL_PASSWORD=tastyigniter
     restart: always
   redis:
     image: redis:6
